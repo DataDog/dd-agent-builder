@@ -1,6 +1,5 @@
 {
   "dd-agent-builder": {
-      "trace-agent_branch": "refs/heads/master",
       "omnibus-ruby_branch": "datadog-5.5.0"
   },
   "omnibus": {
