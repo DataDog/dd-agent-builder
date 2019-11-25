@@ -1,7 +1,9 @@
+**This repo is deprecated**
+
 dd-agent-builder cookbook
 =========================
 
-Used to build the agent on Windows. Heavily relies on the [Chef Omnibus cookbook](https://github.com/chef-cookbooks/omnibus).
+Used to build the Agent 5 on Windows. Heavily relies on the [Chef Omnibus cookbook](https://github.com/chef-cookbooks/omnibus).
 
 It has two recipes. The default recipes runs prepare then build.
 
@@ -12,15 +14,15 @@ Installs Golang and all the dependencies of Omnibus, and downloads `dd-agent-omn
 
 ## dd-agent-builder::build
 
-Builds the agent (with the omnibus_build resource from the omnibus cookbook).
+Builds the Agent 5 (with the omnibus_build resource from the omnibus cookbook).
 
 
 Setting custom parameters
 =========================
 
-Variables to build an agent are pulled from [release.json from
+Variables to build an Agent 5 are pulled from [release.json from
 dd-agent-omnibus](https://github.com/DataDog/dd-agent-omnibus/blob/master/release.json).
-Those variables are used to pin version of the agent dependencies.
+Those variables are used to pin version of the Agent dependencies.
 
 By default the job will use dd-agent-omnibus's `master` and `nightly` from `release.json`.
 
@@ -29,7 +31,7 @@ By default the job will use dd-agent-omnibus's `master` and `nightly` from `rele
 You can choose a specific branch, tag or commit by setting the environment
 variable `DD_AGENT_OMNIBUS_BRANCH`.
 
-## Building a specific version of the agent
+## Building a specific version of the Agent
 
 Instead of building `nightly` you can choose a version from
 [release.json](https://github.com/DataDog/dd-agent-omnibus/blob/master/release.json)
